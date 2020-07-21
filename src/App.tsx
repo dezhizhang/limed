@@ -4,7 +4,7 @@ import Button,{ButtonType,ButtonSize} from './components/Button/button'
 function App() {
   return (
     <div className="App" style={{padding:10}}>
-      <Button btnType={ButtonType.Primary}>hello</Button>
+      <Button onClick={() => alert("hello")} btnType={ButtonType.Primary}>hello</Button>
     </div>
   );
 }
