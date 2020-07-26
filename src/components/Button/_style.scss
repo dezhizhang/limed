@@ -28,7 +28,6 @@
       }
     }
   }
-  
   .btn-lg {
     @include button-size(
       $btn-padding-y-lg,
@@ -45,14 +44,12 @@
       $btn-border-radius-sm
     );
   }
-  
   .btn-primary {
     @include button-style($primary, $primary, $white);
   }
   .btn-danger {
     @include button-style($danger, $danger, $white);
   }
-  
   .btn-default {
     @include button-style(
       $white,
@@ -63,7 +60,6 @@
       $primary
     );
   }
-  
   .btn-link {
     font-weight: $font-weight-normal;
     color: $btn-link-color;
