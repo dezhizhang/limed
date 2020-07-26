@@ -10,7 +10,7 @@ export interface MenuItemProps {
 
 const MenuItem:React.FC<MenuItemProps> = (props) => {
     const { index,disabled,className,style,children } = props;
-    const classes = classNames('limed-menu-item',className,{
+    const classes = classNames('menu-item',className,{
         'is-disabled':disabled
     });
     return (

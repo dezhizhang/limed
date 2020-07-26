@@ -12,7 +12,7 @@ export interface MenuProps {
 
 const Menu:React.FC<MenuProps> = (props) => {
     const { className,mode,style,children,defaultIndex } = props;
-    const classes = classNames('limed-menu',className,{
+    const classes = classNames('menu',className,{
         'menu-vertical':mode === 'vertical'
     });
     return (
