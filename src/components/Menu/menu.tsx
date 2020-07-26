@@ -16,7 +16,7 @@ const Menu:React.FC<MenuProps> = (props) => {
         'menu-vertical':mode === 'vertical'
     });
     return (
-        <ul className={classes} style={style}>
+        <ul className={classes} style={style} data-testid="test-menu">
             {children}
         </ul>
     )
