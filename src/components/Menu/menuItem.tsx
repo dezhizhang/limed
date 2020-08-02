@@ -9,16 +9,21 @@ export interface MenuItemProps {
 }
 
 const MenuItem:React.FC<MenuItemProps> = (props) => {
-    const { index,disabled,className,style,children } = props;
+    const { disabled,className,style,children } = props;
     const classes = classNames('menu-item',className,{
         'is-disabled':disabled
     });
+
+    const handleClick = () => {
+
+    }
     return (
-        <li className={classes} style={style}>
+        <li className={classes} style={style} onClick={handleClick}>
             {children}
         </li>
     )
 
 }
 
+MenuItem.displayName = "MenuItem";
 export default MenuItem;
