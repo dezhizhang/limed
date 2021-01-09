@@ -17,6 +17,8 @@
     "classnames": "^2.2.6",
     "node-sass": "^4.14.1",
     "react": "^16.13.1",
+    "react-docgen": "^5.3.1",
+    "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "typescript": "~3.7.2"
