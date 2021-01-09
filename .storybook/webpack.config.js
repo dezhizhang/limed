@@ -9,7 +9,16 @@ module.exports = ({config}) => {
                 }
             },
             {
-                loader:require.resolve('react-docgen-typescript-loader')
+                loader:require.resolve('react-docgen-typescript-loader'),
+                options:{
+                    shouldExtractLiteralValuesFromEnum:true,
+                    propFilter: (prop) => {
+                        if (prop.parent) {
+                          return !prop.parent.fileName.includes('node_modules')
+                        }
+                        return true            
+                    }
+                }
             }
         ]
     });

@@ -1,4 +1,4 @@
-import React,{ButtonHTMLAttributes,AnchorHTMLAttributes} from 'react'
+import React,{ FC,ButtonHTMLAttributes,AnchorHTMLAttributes} from 'react'
 import classNames from 'classnames';
 
 export enum ButtonSize {
@@ -26,7 +26,7 @@ type AnchorButtonProps = BaseButtonProps & AnchorHTMLAttributes<HTMLElement>;
 //设置这些属性为可选属性
 export type ButtonProps = Partial<NativeButtonProps & AnchorButtonProps>;
 
-const Button:React.FC<ButtonProps> = (props) => {
+export const Button:FC<ButtonProps> = (props) => {
     const {href,className,disabled,size,btnType,children,...resetProps } = props;
     const classes = classNames('btn',className,{
         [`btn-${btnType}`]:btnType,
