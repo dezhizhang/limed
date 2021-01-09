@@ -11,9 +11,18 @@ export const Autocomplete:FC<AutocompleteProps> = (props) => {
 
     const [inputValue,setInputValue] = useState(value);
 
+    const handleChange = (e:ChangeEvent<HTMLInputElement>) => {
+        const value = e.target.value.trim();
+        setInputValue(value);
+    }
+
     return (
         <div className="viking-auto-complete">
-            
+            <Input 
+                value={value}
+                onChange={handleChange}
+                {...restProps}
+            />
         </div>
     )
 }
