@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{ FC,FunctionComponentElement,Children } from 'react';
 import classNames from 'classnames';
 import { MenuItemProps } from './menuItem';
 
@@ -11,14 +11,14 @@ export interface MenuProps {
     onSelect?:(selectedIndex:number) => void;
 }
 
-const Menu:React.FC<MenuProps> = (props) => {
+export const Menu:FC<MenuProps> = (props) => {
     const { className,mode,style,children } = props;
     const classes = classNames('menu',className,{
         'menu-vertical':mode === 'vertical'
     });
     const renderChildren = () => {
-        return React.Children.map(children,(child,index) => {
-            const childElement = child as React.FunctionComponentElement<MenuItemProps>;
+        return Children.map(children,(child,index) => {
+            const childElement = child as FunctionComponentElement<MenuItemProps>;
             const { displayName } = childElement.type;
             if(displayName === "MenuItem") {
                 return React.cloneElement(childElement,{

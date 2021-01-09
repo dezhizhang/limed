@@ -1,4 +1,4 @@
-import React, { InputHTMLAttributes,ReactElement } from 'react';
+import React, {FC, InputHTMLAttributes,ReactElement } from 'react';
 import { IconProp } from '@fortawesome/fontawesome-svg-core';
 type InputSize = 'lg' | 'sm'
 
@@ -10,8 +10,8 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>,'size'
     append?:string | ReactElement;
 }
 
-export const Input:React.FC<InputProps> = (props) => {
-    return (<></>)
+export const Input:FC<InputProps> = (props) => {
+    return (<>hello</>)
 }
 
 export default Input;
