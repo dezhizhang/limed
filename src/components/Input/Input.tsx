@@ -11,6 +11,10 @@ export interface InputProps extends Omit<InputHTMLAttributes<HTMLElement>,'size'
 }
 
 export const Input:FC<InputProps> = (props) => {
+    //取出所有的属性
+    const { disabled,size,icon,prepand,append,...resetProps } = props;
+    //根据属性计算不同的className 
+
     return (<>hello</>)
 }
 
