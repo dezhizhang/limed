@@ -60,7 +60,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
             <Icon icon={icon} title={`title-${icon}`} />
           </div>
         )}
-        <input
+        <input 
           className="input-inner"
           disabled={disabled}
           {...restProps}
@@ -68,7 +68,7 @@ export const Input = React.forwardRef<HTMLInputElement, InputProps>(
         />
         {append && <div className="input-group-append-con">{append}</div>}
       </div>
-    );
+    )
   }
 );
 
