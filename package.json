@@ -1,7 +1,23 @@
 {
   "name": "limed",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
+  "author":"dezhizhang",
+  "main":"dist/index.js",
+  "module":"dist/index.js",
+  "types":"dist/index.d.ts",
+  "description":"limed UI Component library",
+  "license": "MIT",
+  "keywords":[
+    "Component",
+    "UI",
+    "React"
+  ],
+  "repository":{
+    "type":"git",
+    "url":"https://github.com/dezhizhang/limed"
+  },
+  "files":["dist"],
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
@@ -31,7 +47,7 @@
     "build": "npm run clear && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
     "build-ts": "tsc -p tsconfig.build.json",
-    "build-css": "node-sass ./src/styles/index.scss ./build/index.css",
+    "build-css": "node-sass ./src/styles/index.scss ./dist/index.css",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
