@@ -22,13 +22,16 @@
     "react-docgen-typescript-loader": "^3.7.2",
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
+    "rimraf": "^3.0.2",
     "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "clear":"rimraf ./build ",
+    "build": "npm run clear && npm run build-ts && npm run build-css",
     "test": "react-scripts test",
-    "build-ts":"tsc -p tsconfig.build.json",
+    "build-ts": "tsc -p tsconfig.build.json",
+    "build-css": "node-sass ./src/styles/index.scss ./build/index.css",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
