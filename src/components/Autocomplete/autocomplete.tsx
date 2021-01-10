@@ -70,9 +70,9 @@ import Icon from '../Icon/icon';
     //   setHighlightIndex(-1);
     // }, [debouncedValue, fetchSuggestions]);
   
-    //   const renderTemplate = (item: string) => {
-    //     return renderOptions ? renderOptions(item) : item;
-    //   };
+      // const renderTemplate = (item: string) => {
+      //   return renderOptions ? renderOptions(item) : item;
+      // };
     const renderTemplate = (item: DataSourceType) => {
       return renderOptions ? renderOptions(item) : item.value;
     };
